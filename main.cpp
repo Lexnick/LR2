@@ -31,21 +31,23 @@ int main() {
              std::cout<<-y;
              break;
      }
-   double x=0;
-    std::cout<<"Enter x"<<std::endl;
-    std::cin>>x;
-    double sinx=sin(x);
-    double funcx=x;
-    for (int i=2; i!=7; ++i)
-    {
-        sinx=round(sinx*pow(10, i))/pow(10, i);
-        long count=0;
-        while ( sinx != round(pow(-1, count)*pow(x,2*count+1)/fakt(2*count+1)*100)/100 )
-        {
-            count++;
-            funcx+=pow(-1, count)*pow(x,2*count+1)/fakt(2*count+1);
-        }
-        std::cout<<"The number of iterations with accuracy 10^(-"<<i<<") : "<<count<<std::endl;
-    }
+   std::cout<<"Enter x"<<std::endl;
+long double x=0;
+std::cin>>x;
+for ( int i=2; i<7; i++){
+long double sinx=floor(sin(x)*pow(10,i))/pow(10,i);
+std::cout<<"sinx"<<i-1<<"= "<<sinx<<std::endl;
+long double funcx=x;
+int count=0;
+long double accurat_funck=2;
+while (sinx!=accurat_funck) {
+count+=1;
+funcx+=pow(-1,count)*pow(x,2*count+1)/fakt(2*count+1);
+std::cout<<"X after the iteration №"<<count<<": "<<funcx<<std::endl;
+accurat_funck=floor(funcx*pow(10,i))/pow(10,i);
+std::cout<<"Accuratted X after the iteration №"<<count<<": "<<accurat_funck<<std::endl;
+}
+std::cout<<"The count of iteretions with accuracy "<<pow(10,-i)<<":= "<<count<<std::endl;    
+}
     return 0;
 }
