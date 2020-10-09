@@ -9,7 +9,7 @@ long fakt(long b){
 int main() {
     std::cout<<"Code | Symbol"<<std::endl;
     for (unsigned short i=0; i<127; ++i)
-         std::cout<<std::setw(5)<<i<<"|"<< static_cast<char>(i)  << std::endl;
+         std::cout<<std::setw(4)<<i<<" | "<< static_cast<char>(i)  << std::endl;
      char a=0;
      std::cin>>a;
      if ((a>47)&&(a<58))
