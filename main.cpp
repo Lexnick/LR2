@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 long fakt(long b){
     if (b==0||b==1)
         return 1;
