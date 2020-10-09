@@ -6,8 +6,9 @@ long fakt(long b){
     else return fakt(b-1)*b;
 }
 int main() {
-    for (unsigned short i=32; i<127; ++i)
-         std::cout << static_cast<char>(i)  << std::endl;
+    std::cout<<"Code | Symbol"<<std::endl;
+    for (unsigned short i=0; i<127; ++i)
+         std::cout<<std::setw(5)<<i<<"|"<< static_cast<char>(i)  << std::endl;
      char a=0;
      std::cin>>a;
      if ((a>47)&&(a<58))
